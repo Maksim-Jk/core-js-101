@@ -122,7 +122,7 @@ function isTriangle(a, b, c) {
  *
  * @param {object} rect1
  * @param {object} rect2
- * @return {bool}
+ * @return {boolean}
  *
  * @example:
  *   { top: 0, left: 0, width: 10, height: 10 },
@@ -209,8 +209,8 @@ function findFirstSingleChar(str) {
  *
  * @param {number} a
  * @param {number} b
- * @param {bool} isStartIncluded
- * @param {bool} isEndIncluded
+ * @param {boolean} isStartIncluded
+ * @param {boolean} isEndIncluded
  * @return {string}
  *
  * @example
@@ -290,8 +290,8 @@ function reverseInteger(num) {
  *   5436468789016589 => false
  *   4916123456789012 => false
  */
-function isCreditCardNumber(ccn) {
-  const ccnStr = ccn.toString();
+function isCreditCardNumber(cnn) {
+  const ccnStr = cnn.toString();
   const reversedCcnStr = ccnStr.split('')
     .reverse()
     .join('');
@@ -329,11 +329,10 @@ function isCreditCardNumber(ccn) {
  *   10000 ( 1+0+0+0+0 = 1 ) => 1
  *   165536 (1+6+5+5+3+6 = 26,  2+6 = 8) => 8
  */
-function getDigitalRoot(num) {
-  const numStr = num.toString();
+function getDigitalRoot(n) {
+  const numStr = n.toString();
   const sumOfDigits = (str) => str.split('')
-    // eslint-disable-next-line radix
-    .reduce((acc, digit) => acc + parseInt(digit), 0);
+    .reduce((acc, digit) => acc + +digit, 0);
   let sum = sumOfDigits(numStr);
   while (sum > 9) {
     sum = sumOfDigits(sum.toString());

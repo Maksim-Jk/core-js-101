@@ -541,7 +541,8 @@ function group(array, keySelector, valueSelector) {
  * and flattens the resulting sequences into one array.
  *
  * @param {array} arr
- * @param {Function} childrenSelector, a transform function to apply to each element
+ * @param {Function} childrenSelector
+ * a transform function to apply to each element
  *                                     that returns an array of children
  * @return {array}
  *

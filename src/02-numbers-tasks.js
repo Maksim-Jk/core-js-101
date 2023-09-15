@@ -73,8 +73,7 @@ function getAverage(value1, value2) {
 function getDistanceBetweenPoints(x1, y1, x2, y2) {
   const deltaX = x2 - x1;
   const deltaY = y2 - y1;
-  const distance = Math.sqrt(deltaX ** 2 + deltaY ** 2);
-  return distance;
+  return Math.sqrt(deltaX ** 2 + deltaY ** 2);
 }
 
 /**
@@ -90,8 +89,7 @@ function getDistanceBetweenPoints(x1, y1, x2, y2) {
  *   5*x = 0         => 0
  */
 function getLinearEquationRoot(a, b) {
-  const root = -b / a;
-  return root;
+  return -b / a;
 }
 
 
@@ -118,8 +116,7 @@ function getAngleBetweenVectors(x1, y1, x2, y2) {
   const magnitude1 = Math.sqrt(x1 * x1 + y1 * y1);
   const magnitude2 = Math.sqrt(x2 * x2 + y2 * y2);
   const cosTheta = dotProduct / (magnitude1 * magnitude2);
-  const thetaRadians = Math.acos(cosTheta);
-  return thetaRadians;
+  return Math.acos(cosTheta);
 }
 
 /**
@@ -199,7 +196,7 @@ function roundToPowerOfTen(num, pow) {
  * See: https://en.wikipedia.org/wiki/Primality_test
  *
  * @param {number} n
- * @return {bool}
+ * @return {boolean}
  *
  * @example:
  *   4 => false
